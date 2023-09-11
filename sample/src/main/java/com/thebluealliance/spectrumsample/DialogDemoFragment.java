@@ -3,9 +3,11 @@ package com.thebluealliance.spectrumsample;
 import com.thebluealliance.spectrum.SpectrumDialog;
 
 import android.os.Bundle;
-import android.support.annotation.ColorInt;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceFragmentCompat;
+
+import androidx.annotation.ColorInt;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceFragmentCompat;
+
 import android.widget.Toast;
 
 /**
@@ -56,7 +58,7 @@ public class DialogDemoFragment extends PreferenceFragmentCompat {
     private void showDialog1() {
         new SpectrumDialog.Builder(getContext())
                 .setColors(R.array.demo_colors)
-                .setSelectedColorRes(R.color.md_blue_500)
+                .setSelectedColorRes(com.thebluealliance.spectrum.R.color.md_blue_500)
                 .setDismissOnColorSelected(true)
                 .setOutlineWidth(2)
                 .setOnColorSelectedListener(new SpectrumDialog.OnColorSelectedListener() {
@@ -73,7 +75,7 @@ public class DialogDemoFragment extends PreferenceFragmentCompat {
     private void showDialog2() {
         new SpectrumDialog.Builder(getContext())
                 .setColors(R.array.demo_colors)
-                .setSelectedColorRes(R.color.md_blue_500)
+                .setSelectedColorRes(com.thebluealliance.spectrum.R.color.md_blue_500)
                 .setDismissOnColorSelected(false)
                 .setOutlineWidth(2)
                 .setOnColorSelectedListener(new SpectrumDialog.OnColorSelectedListener() {
@@ -90,7 +92,7 @@ public class DialogDemoFragment extends PreferenceFragmentCompat {
     private void showDialog3() {
         new SpectrumDialog.Builder(getContext())
                 .setColors(R.array.many_shades_of_grey)
-                .setSelectedColorRes(R.color.md_black)
+                .setSelectedColorRes(com.thebluealliance.spectrum.R.color.md_black)
                 .setDismissOnColorSelected(false)
                 .setOnColorSelectedListener(new SpectrumDialog.OnColorSelectedListener() {
                     @Override public void onColorSelected(boolean positiveResult, @ColorInt int color) {
@@ -106,7 +108,7 @@ public class DialogDemoFragment extends PreferenceFragmentCompat {
     private void showDialog4() {
         new SpectrumDialog.Builder(getContext())
                 .setColors(R.array.demo_colors)
-                .setSelectedColorRes(R.color.md_blue_500)
+                .setSelectedColorRes(com.thebluealliance.spectrum.R.color.md_blue_500)
                 .setDismissOnColorSelected(true)
                 .setFixedColumnCount(4)
                 .setOnColorSelectedListener(new SpectrumDialog.OnColorSelectedListener() {
@@ -123,7 +125,7 @@ public class DialogDemoFragment extends PreferenceFragmentCompat {
     private void showDialog5() {
         new SpectrumDialog.Builder(getContext(), R.style.DialogTheme)
                 .setColors(R.array.demo_colors)
-                .setSelectedColorRes(R.color.md_blue_500)
+                .setSelectedColorRes(com.thebluealliance.spectrum.R.color.md_blue_500)
                 .setDismissOnColorSelected(true)
                 .setOnColorSelectedListener(new SpectrumDialog.OnColorSelectedListener() {
                     @Override public void onColorSelected(boolean positiveResult, @ColorInt int color) {

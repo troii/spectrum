@@ -2,7 +2,9 @@ package com.thebluealliance.spectrumsample;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.v7.preference.Preference;
+
+import androidx.preference.Preference;
+
 import android.util.AttributeSet;
 
 import com.thebluealliance.spectrum.SpectrumPreferenceCompat;
